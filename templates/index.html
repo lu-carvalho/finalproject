@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Financea$y
+{% endblock %}
+
+{% block main %}
+    <form action="/" method="post">
+        <div class="container">
+            <div id="income">
+                <h1>Income</h1>
+                <p></p>
+                <input type="number" name="income" id="inputs" placeholder="input an income" step="any" value="0">
+                <p></p>
+                <select name="category" class="form-select" aria-label="Default select example">
+                    <option selected="true" disabled="disabled">Pick a category</option>
+                    <option value="Salary">Salary</option>
+                    <option value="Donation">Donation</option>
+                    <option value="Bonus">Bonus</option>
+                    <option value="Investments">Investments</option>
+                    <option value="Nanas treat">Nana's treat</option>
+                </select>
+                <p></p>
+                <div class="input-group-append">
+                    <button class="btn btn-light" type="submit">Enter income</button>
+                </div>
+            </div>
+            
+            <div id="balance">
+                <h1>Balance</h1>
+                <h1>{{ balance }}</h1>
+            </div>
+
+            <div id="expense">
+                <h1>Expense</h1>
+                <p></p>
+                <input type="number" name="expense" id="inputs" placeholder="input an expense" step="any" value="0">
+                <p></p>
+                <select name ="category" class="form-select" aria-label="Default select example">
+                    <option selected="true" disabled="disabled">Pick a category</option>
+                    <option value="Personal care">Personal care</option>
+                    <option value="Education">Education</option>
+                    <option value="Famly/kids">Family/kids</option>
+                    <option value="Taxes">Taxes</option>
+                    <option value="Pleasure and Hobbies">Pleasure and Hobbies</option>
+                    <option value="Grossery">Grossery</option>
+                    <option value="Pets">Pets</option>
+                    <option value="Subscriptions">Subscriptions</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="House">House</option>
+                    <option value="Others">Others</option>
+                </select>
+                <p></p>
+                <div class="input-group-append">
+                    <button class="btn btn-light" type="submit">Enter expense</button>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+{% endblock %}

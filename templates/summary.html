@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sumary | Financea$y
+{% endblock %}
+
+{% block main %}
+    <div class="t-container">
+        <div name="income table">
+            <table id="table" style='margin-top: 30px' class="table table-hover">
+            <thead style="font-size: 22px">
+                <th>Income</th>
+                <tr>
+                <th scope="col"> Category </th>
+                <th scope="col"> Value (USD) </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in categoryI %}
+                <tr>
+                <td>  {{ row["category"]}}  </td>
+                <td> Value per category </td>
+                </tr>
+                {% endfor %}
+            </body>
+            </table>
+        </div>
+        <div name="expense table">
+            <table id="table" style='margin-top: 30px' class="table table-hover">
+            <thead style="font-size: 22px">
+                <th>Expense</th>
+                <tr>
+                <th scope="col"> Category </th>
+                <th scope="col"> Value (USD) </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in categoryE %}
+                <tr>
+                <td>  {{ row["category"]}}  </td>
+                <td> Value per category </td>
+                </tr>
+                {% endfor %}
+            </body>
+            </table>
+        </div>
+    </div>  
+{% endblock %}

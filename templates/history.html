@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History | Financea$y
+{% endblock %}
+
+{% block main %}
+    <table id="table" style='margin-top: 30px' class="table table-hover">
+      <thead style="font-size: 22px">
+        <tr>
+          <th scope="col"> Category </th>
+          <th scope="col"> Type </th>
+          <th scope="col"> Value (USD) </th>
+          <th scope="col"> When (UTC) </th>
+        </tr>
+      </thead>
+      <tbody>
+        {%for row in rows%}
+        <tr>
+          <td>  {{ row["category"] }}  </td>
+          <td>  {{ row["type"] }}  </td>
+          <td class="dollars">  {{ row["value"] }} </td>
+          <td>  {{ row["timestamp"] }} </td>
+        </tr>
+        {% endfor %}
+      </body>
+    </table>
+{% endblock %}
